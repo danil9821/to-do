@@ -5,7 +5,4 @@ services:
        - "90:90"
       volumes:
        - .:/to-do
-      depends_on:
-       - redis
-    redis:
-      image: redis
+      

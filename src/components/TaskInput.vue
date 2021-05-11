@@ -12,8 +12,8 @@ export default {
   setup(props, { emit }) {
     const title = ref('')
     const onAddTask = () => {
-      emit('onAddTask', { title: title.value })
-      title.value = ''
+       emit('onAddTask', {title: title.value})
+           title.value = ''
     }
     return {
       title,
