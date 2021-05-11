@@ -1,14 +1,14 @@
 <template>
-  <main>
-    <div class="card">
-        <TaskInput @onAddTask="addTask"></TaskInput>
-        <ul class="task-list my-list">
+  
+    <main>
+      <TaskInput @onAddTask="addTask"></TaskInput>
+      <ul class="task-list my-list">
         <li v-for="item in taskList" :key="item.id">
-            <TaskCard @onRemove="removeTask(item.id)" @onDone="setDoneTask(item.id)" :model="item"></TaskCard>
+          <TaskCard @onRemove="removeTask(item.id)" @onDone="setDoneTask(item.id)" :model="item"></TaskCard>
         </li>
-        </ul>
-    </div>
-  </main>
+      </ul>
+    </main>
+ 
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
     TaskInput
   },
   setup() {
-    const taskList = ref([{id: 0, title: 'Создать первую задачу', status: false}])
+    const taskList = ref([{id: 0, title: 'Добавьте первую задачу', status: false}])
     const addTask = ({title}) => {
       taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length - 1].id + 1, title, status: false}]
     }
