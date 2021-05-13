@@ -1,0 +1,8 @@
+services:
+    to-do:
+      build: .
+      ports:
+       - "90:90"
+      volumes:
+       - .:/to-do
+      

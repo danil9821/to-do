@@ -10,7 +10,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   emits: ['onDone', 'onRemove'],
@@ -19,7 +18,7 @@ export default {
       required: true,
       default: {
         id: 0,
-        title: '',
+        title: 'Добавьте задачу',
         status: false
       }
     }
